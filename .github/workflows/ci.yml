@@ -19,6 +19,6 @@ jobs:
       run: |
         HASH=$(echo $GITHUB_SHA | head -c7)
         echo "hash=$HASH" >> $GITHUB_OUTPUT
-        
+
     - name: Build docker image
-      run: docker build -t igorvinicyos/nlw.service.passin:${{ steps.generate_hash.outputs.sh.hash }} .
+      run: docker build -t igorvinicyos/nlw.service.passin:${{ steps.generate_hash.outputs.hash }} .
