@@ -32,3 +32,5 @@ jobs:
     - name: Push image
       run: |
         docker push igorvinicyos/nlw.service.passin:${{ steps.generate_hash.outputs.hash }}
+        docker tag igorvinicyos/nlw.service.passin:${{ steps.generate_hash.outputs.hash }} igorvinicyos/nlw.service.passin:latest
+        docker push igorvinicyos/nlw.service.passin:latest
